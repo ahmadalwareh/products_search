@@ -1,3 +1,6 @@
 .vscode
-/product_search/product_search/__pycache__
-/product_search/products/__pycache__
+__pycache__/
+.env
+.venv
+env/
+venv/
