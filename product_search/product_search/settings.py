@@ -10,8 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from drf_yasg import openapi
-from drf_yasg.views import get_schema_view
+
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -148,16 +147,3 @@ SWAGGER_SETTINGS = {
         }
     },
 }
-
-
-schema_view = get_schema_view(
-    openapi.Info(
-        title='Product API',
-        default_version='v1',
-        description='API documentation for product search',
-        terms_of_service='https://www.example.com/terms/',
-        contact=openapi.Contact(email='contact@example.com'),
-        license=openapi.License(name='BSD License'),
-    ),
-    public=True,
-)
