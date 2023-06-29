@@ -15,8 +15,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from products.views import ProductSearchView
 from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/products/search/', ProductSearchView.as_view()),
 ]
