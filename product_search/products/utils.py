@@ -1,4 +1,3 @@
-# products/utils.py
 
 import jwt
 from django.conf import settings
@@ -15,8 +14,6 @@ def authenticate(request):
         _, token = auth_header.split()
         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
         user_id = payload['user_id']
-        # Perform any additional authentication checks if needed
-        # For example, verify if the user exists or has the necessary permissions
 
         return user_id
 
